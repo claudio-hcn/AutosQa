@@ -1,6 +1,7 @@
 package com.AutosQA;
 
 public class Auto {
+    
     private Long id;
     private String marca;
     private String modelo;

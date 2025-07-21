@@ -1,4 +1,4 @@
-package com.AutosQA;
+package com.AutosQA.model;
 
 public class Auto {
     

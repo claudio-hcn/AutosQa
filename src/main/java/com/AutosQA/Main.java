@@ -1,11 +1,13 @@
+package com.AutosQA;
+
 import com.AutosQA.dao.AutoDAO;
-import com.AutosQA.db.CrearTabla;
 import com.AutosQA.model.Auto;
-import com.AutosQA.db.Conexion; 
+import com.AutosQA.db.CrearTabla;
+import com.AutosQA.db.Conexion;
 import java.sql.Connection;
 import java.sql.SQLException;
-    
 
+    
 public class Main {
     public static void main(String[] args) {
 

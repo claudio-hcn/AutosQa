@@ -1,6 +1,7 @@
-package com.AutosQA;
-
+package com.AutosQA.dao;
 import com.AutosQA.db.Conexion;
+import com.AutosQA.model.Auto;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

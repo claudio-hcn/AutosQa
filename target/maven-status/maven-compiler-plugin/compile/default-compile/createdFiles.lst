@@ -2,4 +2,3 @@ com\AutosQA\Auto.class
 com\AutosQA\db\Conexion.class
 com\AutosQA\db\CrearTabla.class
 com\AutosQA\AutoDAO.class
-com\AutosQA\Main.class

@@ -7,10 +7,10 @@ public class CrearTabla {
     public static void crearTabla() {
         String sql = """
             CREATE TABLE IF NOT EXISTS auto (
-                id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                id INTEGER PRIMARY KEY AUTO_INCREMENT,
                 marca VARCHAR(100),
                 modelo VARCHAR(100),
-                fabricacion BIGINT
+                fabricacion INTEGER
             );
         """;
 

@@ -1,17 +1,21 @@
 @echo off
 echo Compilando archivos Java...
-javac com\AutosQA\*.java com\AutosQA\dao\*.java com\AutosQA\model\*.java com\AutosQA\db\*.java
+
+cd src\main\java
+
+REM Crea la carpeta de clases si no existe
+mkdir ..\..\..\bin 2>nul
+
+REM Compila todos los archivos y los deja en bin
+javac -d ..\..\..\bin com\AutosQA\*.java
 
 if %errorlevel% neq 0 (
     echo ❌ Error de compilación.
-    pause
-    exit /b %errorlevel%
+) else (
+    echo ✅ Compilación exitosa.
+    echo Ejecutando clase principal...
+    cd ..\..\..\bin
+    java com.AutosQA.MainApp
 )
 
-echo ✅ Compilación exitosa.
-echo Ejecutando programa...
-
-java com.AutosQA.Main
-
-echo 🏁 Programa finalizado.
 pause

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">AutosQA</a> &gt; <a href="index.source.html" class="el_package">com.AutosQA</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package com.AutosQA;
+import com.AutosQA.dao.AutoDAO;
+import com.AutosQA.model.Auto;
+import com.AutosQA.db.Conexion;
+import com.AutosQA.db.CrearTabla;
+import java.util.List;
+import java.sql.Connection;
+import java.sql.Statement;  
+
+
+<span class="nc" id="L11">public class Main {</span>
+    public static void main(String[] args) {
+        // Crear tabla
+<span class="nc" id="L14">        CrearTabla.crearTabla();</span>
+
+        // DAO
+<span class="nc" id="L17">        AutoDAO autoDAO = new AutoDAO();</span>
+
+<span class="nc" id="L19">        System.out.println(&quot;Conexion establecida&quot;);</span>
+
+        // Crear auto
+<span class="nc" id="L22">        Auto auto = new Auto(null, &quot;Toyota&quot;, &quot;Corolla&quot;, 2020L);</span>
+<span class="nc" id="L23">        autoDAO.crear(auto);</span>
+
+        // Listar autos
+<span class="nc" id="L26">        List&lt;Auto&gt; autos = autoDAO.listar();</span>
+<span class="nc" id="L27">        System.out.println(&quot;Listado de autos:&quot;);</span>
+<span class="nc bnc" id="L28" title="All 2 branches missed.">        for (Auto a : autos) {</span>
+<span class="nc" id="L29">            System.out.println(a);</span>
+<span class="nc" id="L30">        }</span>
+
+        // Buscar por ID
+<span class="nc" id="L33">        Auto encontrado = autoDAO.buscarPorId(1L);</span>
+<span class="nc bnc" id="L34" title="All 2 branches missed.">        if (encontrado != null) {</span>
+<span class="nc" id="L35">            System.out.println(&quot;Auto encontrado: &quot; + encontrado);</span>
+        }
+
+        // Actualizar auto
+<span class="nc" id="L39">        encontrado.setModelo(&quot;Corolla GLi&quot;);</span>
+<span class="nc" id="L40">        autoDAO.actualizar(encontrado);</span>
+<span class="nc" id="L41">        System.out.println(&quot;Auto actualizado: &quot; + autoDAO.buscarPorId(1L));</span>
+
+        // Eliminar auto
+<span class="nc" id="L44">        autoDAO.eliminar(1L);</span>
+<span class="nc" id="L45">        System.out.println(&quot;Listado después de eliminar:&quot;);</span>
+<span class="nc" id="L46">        autoDAO.listar().forEach(System.out::println);</span>
+<span class="nc" id="L47">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

@@ -1,1 +1,4 @@
-com\AutosQA\AutoDaoTest.class
+com\AutosQA\dao\AutoDaoMockTest.class
+com\AutosQA\db\ConexionTest.class
+com\AutosQA\dao\AutoDaoTest.class
+com\AutosQA\model\AutoTest.class

@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: com.AutosQA.AutoDaoTest
+Test set: com.AutosQA.dao.AutoDaoMockTest
 -------------------------------------------------------------------------------
-Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.163 s -- in com.AutosQA.AutoDaoTest
+Tests run: 4, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.933 s -- in com.AutosQA.dao.AutoDaoMockTest

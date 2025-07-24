@@ -1,5 +1,7 @@
 package com.AutosQA.model;
 
+import java.util.Objects;
+
 public class Auto {
     
     private Integer id;
@@ -54,5 +56,21 @@ public class Auto {
     @Override
     public String toString() {
         return "Auto{id=" + id + ", marca='" + marca + "', modelo='" + modelo + "', fabricacion=" + fabricacion + "}";
+    }
+    /* refactorizacion: mejora para que la comparación de objetos sea por contenido y no por referencia (memoria) */
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Auto auto = (Auto) o;
+        return Objects.equals(id, auto.id) &&
+            Objects.equals(marca, auto.marca) &&
+            Objects.equals(modelo, auto.modelo) &&
+            Objects.equals(fabricacion, auto.fabricacion);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, marca, modelo, fabricacion);
     }
 }

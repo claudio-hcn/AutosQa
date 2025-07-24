@@ -7,10 +7,10 @@ import java.sql.Statement;
     public static void crearTabla() {
 <span class="nc" id="L8">        String sql = &quot;&quot;&quot;</span>
             CREATE TABLE IF NOT EXISTS auto (
-                id BIGINT PRIMARY KEY AUTO_INCREMENT,
+                id INTEGER PRIMARY KEY AUTO_INCREMENT,
                 marca VARCHAR(100),
                 modelo VARCHAR(100),
-                fabricacion BIGINT
+                fabricacion INTEGER
             );
         &quot;&quot;&quot;;
 

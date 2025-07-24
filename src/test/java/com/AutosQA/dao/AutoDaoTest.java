@@ -1,6 +1,15 @@
-package com.AutosQA;
+package com.AutosQA.dao;
 
-import com.AutosQA.dao.AutoDAO;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.junit.jupiter.api.extension.ExtendWith;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.contains;
+import static org.mockito.Mockito.*;
+
 import com.AutosQA.model.Auto;
 import com.AutosQA.db.Conexion;
 
@@ -12,6 +21,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@ExtendWith({MockitoExtension.class})
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AutoDaoTest {
 
@@ -20,6 +30,7 @@ public class AutoDaoTest {
 
     public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_RESET = "\u001B[0m";
+
 
     private void imprimirEncabezado(String nombreTest) {
         System.out.println("==========================================");
@@ -69,7 +80,6 @@ public class AutoDaoTest {
         autoDAO.crear(new Auto("Toyota", "4runner", 2020));
         autoDAO.crear(new Auto("Toyota", "Yaris", 2021));
         autoDAO.crear(new Auto("Ford", "Fiesta", 2019));
-    
 
         List<Auto> autos = autoDAO.listar();
         assertFalse(autos.isEmpty(), "La lista de autos no debe estar vacía");
@@ -78,7 +88,7 @@ public class AutoDaoTest {
         assertEquals(4, autos.size());
     }
 
-    /** Este test representa la refactorización de crear Auto 
+     /** Este test representa la refactorización de crear Auto 
      * las mejoras que aplicamos incluyen validar que los campos no esten vacios
      * **/
     @Test
@@ -90,44 +100,25 @@ public class AutoDaoTest {
         Auto autoValido = new Auto(null, "Toyota", "Corolla", 2021);
         assertDoesNotThrow(() -> autoDAO.crear(autoValido));
 
-        // ❌ Marca vacía
+        // Marca vacía
         assertThrows(IllegalArgumentException.class, () -> {
             new Auto(null, "", "Corolla", 2021);
         });
 
-        // ❌ Modelo nulo
+        //  Modelo nulo
         assertThrows(IllegalArgumentException.class, () -> {
             new Auto(null, "Toyota", null, 2021);
         });
 
-        // ❌ Año nulo
+        // Año nulo
         assertThrows(IllegalArgumentException.class, () -> {
             new Auto(null, "Toyota", "Corolla", null);
         });
     }
 
-
-    /** Este test podemos ver como detecta el error de validación 
-     * al enviar la marca vacia
-     * .. **/
-    @Test
-    @DisplayName("Test validación - marca vacía lanza excepción")
-    void testValidacionMarcaVacia() {
-        imprimirEncabezado("Test validación marca vacía");
-        assertThrows(IllegalArgumentException.class, () -> {
-            new Auto(null, "", "ModeloTest", 2022);
-
-        List<Auto> autos = autoDAO.listar();
-        System.out.println("Listado de autos: " + autos.size());
-        autos.forEach(System.out::println);    
-        });
-   }
-
-
     @Test
     @DisplayName("Test listar Autos")
     void testListar() {
-
         imprimirEncabezado("Test listar Autos");
         Auto auto = new Auto(null, "Chevrolet", "Spark", 2017);
         Auto auto1 = new Auto(null, "Chevrolet", "Corsa", 2016);
@@ -211,7 +202,7 @@ public class AutoDaoTest {
 
         List<Auto> resultado = autoDAO.listarPorAnioFabricacion(2020);
         
-        System.out.println("Resultado por año de fabrocación: ");
+        System.out.println("Resultado por año de fabricación: ");
         resultado.forEach(System.out::println);
         assertEquals(1, resultado.size());
         assertEquals("Kia", resultado.get(0).getMarca());
@@ -233,4 +224,5 @@ public class AutoDaoTest {
         assertDoesNotThrow(() -> autoDAO.eliminar(999));
         System.out.println("Intento de eliminar auto inexistente no arrojó error.");
     }
+    
 }

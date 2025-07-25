@@ -1,15 +1,5 @@
 package com.AutosQA.dao;
 
-import org.mockito.Mock;
-import org.mockito.junit.jupiter.MockitoExtension;
-import org.junit.jupiter.api.extension.ExtendWith;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.contains;
-import static org.mockito.Mockito.*;
-
 import com.AutosQA.model.Auto;
 import com.AutosQA.db.Conexion;
 
@@ -21,7 +11,6 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith({MockitoExtension.class})
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
 public class AutoDaoTest {
 
@@ -65,7 +54,7 @@ public class AutoDaoTest {
     }
 
     @BeforeEach
-    public void limpiarTabla() throws Exception {
+    void limpiarTabla() throws Exception {
         try (Statement stmt = connection.createStatement()) {
             stmt.execute("DELETE FROM auto");
         }

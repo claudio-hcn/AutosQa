@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.AutosQA.db.ConexionTest" time="0.055" tests="12" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.AutosQA.db.ConexionTest" time="0.089" tests="12" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CL"/>
     <property name="sun.boot.library.path" value="C:\Users\Familia Romero\Desktop\Boopcamp QA\programas\jdk-17.0.15_windows-x64_bin\jdk-17.0.15\bin"/>
-    <property name="sun.java.command" value="C:\Users\Familia Romero\AppData\Local\Temp\surefire9688159609621351893\surefirebooter-20250724141507080_3.jar C:\Users\Familia Romero\AppData\Local\Temp\surefire9688159609621351893 2025-07-24T14-15-06_759-jvmRun1 surefire-20250724141507080_1tmp surefire_0-20250724141507080_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\Familia Romero\AppData\Local\Temp\surefire8505825548523423798\surefirebooter-20250724201628382_3.jar C:\Users\Familia Romero\AppData\Local\Temp\surefire8505825548523423798 2025-07-24T20-16-28_073-jvmRun1 surefire-20250724201628382_1tmp surefire_0-20250724201628382_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\Familia Romero\Desktop\Boopcamp QA\entregables\AutosQa\target\test-classes;C:\Users\Familia Romero\Desktop\Boopcamp QA\entregables\AutosQa\target\classes;C:\Users\Familia Romero\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\Familia Romero\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\Familia Romero\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\Familia Romero\.m2\repository\org\mockito\mockito-inline\5.2.0\mockito-inline-5.2.0.jar;C:\Users\Familia Romero\.m2\repository\org\mockito\mockito-core\5.11.0\mockito-core-5.11.0.jar;C:\Users\Familia Romero\.m2\repository\net\bytebuddy\byte-buddy\1.14.12\byte-buddy-1.14.12.jar;C:\Users\Familia Romero\.m2\repository\net\bytebuddy\byte-buddy-agent\1.14.12\byte-buddy-agent-1.14.12.jar;C:\Users\Familia Romero\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\Familia Romero\.m2\repository\org\mockito\mockito-junit-jupiter\5.11.0\mockito-junit-jupiter-5.11.0.jar;C:\Users\Familia Romero\.m2\repository\org\projectlombok\lombok\1.18.30\lombok-1.18.30.jar;C:\Users\Familia Romero\.m2\repository\com\h2database\h2\2.2.224\h2-2.2.224.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Familia Romero\AppData\Local\Temp\surefire9688159609621351893\surefirebooter-20250724141507080_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Familia Romero\AppData\Local\Temp\surefire8505825548523423798\surefirebooter-20250724201628382_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.15+9-LTS-241"/>
@@ -57,16 +57,16 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="getConnection_deberiaPermitirVerificarMetadatos" classname="com.AutosQA.db.ConexionTest" time="0.01"/>
-  <testcase name="getConnection_noDeberiaSerNull" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
-  <testcase name="getConnection_deberiaPermitirMultiplesConexiones" classname="com.AutosQA.db.ConexionTest" time="0.004"/>
-  <testcase name="getConnection_noDeberiaLanzarExcepcion" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
-  <testcase name="getConnection_deberiaMantenerDatosEntreConexiones" classname="com.AutosQA.db.ConexionTest" time="0.01"/>
-  <testcase name="getConnection_deberiaEstablecerConexionExitosamente" classname="com.AutosQA.db.ConexionTest" time="0.001"/>
-  <testcase name="getConnection_deberiaManejarCierreCorrectamente" classname="com.AutosQA.db.ConexionTest" time="0.001"/>
-  <testcase name="getConnection_deberiaEstarAbierta" classname="com.AutosQA.db.ConexionTest" time="0.001"/>
-  <testcase name="getConnection_deberiaSerCompatibleConAutocommit" classname="com.AutosQA.db.ConexionTest" time="0.001"/>
-  <testcase name="getConnection_deberiaPermitirOperacionesBasicasSQL" classname="com.AutosQA.db.ConexionTest" time="0.005"/>
-  <testcase name="getConnection_deberiaConectarAH2EnMemoria" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
-  <testcase name="getConnection_deberiaUsarCredencialesCorrectas" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
+  <testcase name="getConnection_deberiaPermitirVerificarMetadatos" classname="com.AutosQA.db.ConexionTest" time="0.019"/>
+  <testcase name="getConnection_noDeberiaSerNull" classname="com.AutosQA.db.ConexionTest" time="0.003"/>
+  <testcase name="getConnection_deberiaPermitirMultiplesConexiones" classname="com.AutosQA.db.ConexionTest" time="0.006"/>
+  <testcase name="getConnection_noDeberiaLanzarExcepcion" classname="com.AutosQA.db.ConexionTest" time="0.003"/>
+  <testcase name="getConnection_deberiaMantenerDatosEntreConexiones" classname="com.AutosQA.db.ConexionTest" time="0.017"/>
+  <testcase name="getConnection_deberiaEstablecerConexionExitosamente" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
+  <testcase name="getConnection_deberiaManejarCierreCorrectamente" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
+  <testcase name="getConnection_deberiaEstarAbierta" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
+  <testcase name="getConnection_deberiaSerCompatibleConAutocommit" classname="com.AutosQA.db.ConexionTest" time="0.002"/>
+  <testcase name="getConnection_deberiaPermitirOperacionesBasicasSQL" classname="com.AutosQA.db.ConexionTest" time="0.007"/>
+  <testcase name="getConnection_deberiaConectarAH2EnMemoria" classname="com.AutosQA.db.ConexionTest" time="0.003"/>
+  <testcase name="getConnection_deberiaUsarCredencialesCorrectas" classname="com.AutosQA.db.ConexionTest" time="0.003"/>
 </testsuite>
